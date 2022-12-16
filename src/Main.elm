@@ -1,5 +1,7 @@
 module Main exposing (..)
 
+import Bootstrap.CDN as CDN
+import Bootstrap.Grid as Grid
 import Browser
 import Components.ProductCard as CardComponent
 import Html as H exposing (Html)
@@ -33,6 +35,12 @@ view =
     CardComponent.view
 
 
-main : Program () Model Msg
+
 main =
-    Browser.sandbox { init = init, update = update, view = view }
+    Grid.container []
+        [ CDN.stylesheet -- creates an inline style node with the Bootstrap CSS
+        , Grid.row []
+            [ Grid.col []
+                [ H.text "Some content for my view here..." ]
+            ]
+        ]
