@@ -13,7 +13,7 @@ import Html.Attributes as A
 view model =
     Card.config [ Card.attrs [ A.style "width" "20rem" ] ]
         |> Card.header [ A.class "text-center" ]
-            [ H.img [ A.src "assets/images/elm-bootstrap.svg" ] []
+            [ H.img [ A.src "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" ] []
             , H.h3 [ Spacing.mt2 ] [ H.text "Custom Card Header" ]
             ]
         |> Card.block []
