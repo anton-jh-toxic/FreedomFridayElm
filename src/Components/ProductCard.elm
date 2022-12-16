@@ -23,6 +23,6 @@ view product =
             [ Block.titleH4 [] [ H.text product.title ]
             , Block.text [] [ H.text product.description ]
             , Block.custom <|
-                Button.button [ Button.primary ] [ H.text "Go somewhere" ]
+                Button.button [ Button.success ] [ H.text "Add to cart 🛒" ]
             ]
         |> Card.view
