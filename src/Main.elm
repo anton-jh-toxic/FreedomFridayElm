@@ -30,17 +30,16 @@ update msg model =
             { model | number = model.number + 1 }
 
 
-view : Model -> Html Msg
-view =
-    CardComponent.view
-
-
-
-main =
+view model =
     Grid.container []
         [ CDN.stylesheet -- creates an inline style node with the Bootstrap CSS
         , Grid.row []
             [ Grid.col []
-                [ H.text "Some content for my view here..." ]
+                [ CardComponent.view () ]
             ]
         ]
+
+
+main : Program () Model Msg
+main =
+    Browser.sandbox { init = init, update = update, view = view }

@@ -6,10 +6,11 @@ import Bootstrap.Card as Card
 import Bootstrap.Card.Block as Block
 import Bootstrap.Grid as Grid
 import Bootstrap.Utilities.Spacing as Spacing
-import Html as H
+import Html as H exposing (Html)
 import Html.Attributes as A
 
 
+view : a -> Html msg
 view model =
     Card.config [ Card.attrs [ A.style "width" "20rem" ] ]
         |> Card.header [ A.class "text-center" ]
