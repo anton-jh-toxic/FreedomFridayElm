@@ -1,6 +1,6 @@
 module Main exposing(..)
 
-import Html as H exposing (Html, text)
+import Html as H exposing (Html)
 import Html.Events as E
 import Html.Attributes as A
 import Browser
