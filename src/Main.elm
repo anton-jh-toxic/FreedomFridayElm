@@ -1,12 +1,10 @@
 module Main exposing (..)
 
 import Bootstrap.CDN as CDN
-import Bootstrap.Grid as Grid exposing (row)
+import Bootstrap.Grid as Grid
 import Browser
 import Components.ProductCard as CardComponent
 import Html as H exposing (Html)
-import Html.Attributes as A
-import Html.Events as E
 import Stuff.Api as Api exposing (Product)
 
 
@@ -44,6 +42,7 @@ update msg model =
                     ( Success (ShopModel res), Cmd.none )
 
 
+view : Model -> Html Msg
 view model =
     Grid.container []
         [ CDN.stylesheet -- creates an inline style node with the Bootstrap CSS
